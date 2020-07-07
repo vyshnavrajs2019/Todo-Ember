@@ -1,0 +1,36 @@
+{{!-- <button onclick={{action 'callMe'}}>callMe</button> --}}
+
+<form method="post" class="form row sm-12 p-1" onsubmit={{action 'createTodo'}}>
+	
+	{{#todo-form-group label="Title"}}
+		{{input 
+			placeholder="Title" 
+			class="row sm-12 input" 
+			value=title
+		}}
+	{{/todo-form-group}}
+
+	{{#todo-form-group label="Description"}}
+		{{textarea 
+			placeholder="Description" 
+			class="row sm-12 input" 
+			rows=15 
+			value=description
+		}}
+	{{/todo-form-group}}
+
+	<div class="row">
+		<button 
+			type="submit" 
+			class="btn btn-p row mr-1 horizontal-center">
+				{{actionButtonTitle}}
+		</button>
+		<button 
+			type="reset" 
+			class="btn row horizontal-center"
+			onclick={{action "resetForm"}}>
+				Reset
+		</button>
+	</div>
+
+</form>

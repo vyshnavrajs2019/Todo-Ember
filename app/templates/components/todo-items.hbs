@@ -1,0 +1,7 @@
+{{#each todosSorted as |todo|}}
+	{{todo-item todo=todo totalTodos=totalTodos editTodoFromHome=(action 'editTodoFromHome') deleteTodoFromHome=(action 'deleteTodoFromHome')}}
+{{else}}
+	<div class="row card p-1 muted small horizontal-center">
+		Congradulations!, you have no pending tasks.
+	</div>
+{{/each}}

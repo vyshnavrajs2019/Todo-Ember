@@ -1,0 +1,10 @@
+{{!-- <button onclick={{action 'clickMe'}}>Click Me</button> --}}
+
+<div class="row">
+	<div class="col sm-12 lg-5 p-1">
+		{{todo-form actionButtonTitle=actionButtonTitle title=title description=description create=(action 'createTodo') reset=(action 'resetTodo')}}
+	</div>
+	<div class="col sm-12 lg-7 p-1 vertical-start">
+		{{todo-items todos=todos editTodo=(action 'editTodo') deleteTodo=(action 'deleteTodo')}}
+	</div>
+</div>
